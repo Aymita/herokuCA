@@ -11,7 +11,7 @@ export class ApiService {
 
   getEpisodes(){
       
-      return this.http.get(`https://8100-d49cf40a-d107-4de6-9e41-7e61c30cb218.ws-eu01.gitpod.io//assets/episodes.json`);
+      return this.http.get(`https://8100-c5697708-bc80-4673-b5a4-7a9b546c2cb1.ws-eu01.gitpod.io//assets/episodes.json`);
   }
 
   getEpisode(id) {   
@@ -42,7 +42,7 @@ export class ApiService {
  }
 
  getCharacters(){
-      return this.http.get(`https://8100-d49cf40a-d107-4de6-9e41-7e61c30cb218.ws-eu01.gitpod.io//assets/characters.json`);
+      return this.http.get(`https://8100-c5697708-bc80-4673-b5a4-7a9b546c2cb1.ws-eu01.gitpod.io//assets/characters.json`);
   }
 
   getCharacter(id) {   
@@ -90,7 +90,7 @@ export class ApiService {
  }
 
  getQuotes(){
-      return this.http.get(`https://8100-d49cf40a-d107-4de6-9e41-7e61c30cb218.ws-eu01.gitpod.io//assets/quotes.json`);
+      return this.http.get(`https://8100-c5697708-bc80-4673-b5a4-7a9b546c2cb1.ws-eu01.gitpod.io//assets/quotes.json`);
   }
 
   getQuote(id) {   
@@ -137,7 +137,7 @@ export class ApiService {
  }
  
  getDeaths(){     
-    return this.http.get(`https://8100-d49cf40a-d107-4de6-9e41-7e61c30cb218.ws-eu01.gitpod.io//assets/deaths.json`);
+    return this.http.get(`https://8100-c5697708-bc80-4673-b5a4-7a9b546c2cb1.ws-eu01.gitpod.io//assets/deaths.json`);
   }
  
   getDeathsByName(name){
