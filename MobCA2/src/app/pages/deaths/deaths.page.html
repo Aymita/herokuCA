@@ -1,0 +1,38 @@
+<ion-header>
+   <ion-toolbar color="primary"> 
+    <ion-avatar>
+      <img src="./assets/icon/character.ico" />
+    </ion-avatar>
+    <ion-title>Deaths</ion-title>   
+ </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+    <ion-searchbar class="font_red" [(ngModel)]="searchTerm" (ionChange)="searchChanges($event)"></ion-searchbar>
+        <ion-item>
+            <ion-label class="font_red">Select type</ion-label>
+            <ion-select class="font_red" [(ngModel)]="type" (ionChange)="searchChanges($event)">
+                <ion-select-option value="">All</ion-select-option>
+                <ion-select-option value="name">Name</ion-select-option>
+                <ion-select-option value="deathCount">Death Count</ion-select-option> 
+                <ion-select-option value="random">Random</ion-select-option>     
+            </ion-select>
+        </ion-item>
+     <ion-list>    
+        <ion-item  *ngFor="let death of deaths | async" >
+             <ion-avatar slot="start">
+                <img src="./assets/icon/character.ico" alt="ion">
+            </ion-avatar>
+            <ion-label>
+                <h3>{{death?.death_id}} {{death?.death}} {{death?.deathCount}}</h3>
+                <p>{{death?.deathCount}}</p>
+            </ion-label> 
+        </ion-item>    
+  </ion-list>
+<!--
+  <infinite-scroll threshold="25%" (ionInfinite="loadData($event)">
+    <infinite-scroll-content loadingSpinner="cresent" loadingText="Loading more data.."></infinite-scroll-content>
+  </infinite-scroll>
+-->
+</ion-content>
+
+

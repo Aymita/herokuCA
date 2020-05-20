@@ -1,0 +1,32 @@
+<ion-header>
+   <ion-toolbar color="primary"> 
+    <ion-avatar>
+      <img src="./assets/icon/character.ico" />
+    </ion-avatar>
+    <ion-title>Quotes</ion-title>   
+ </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+    <ion-searchbar class="font_red" [(ngModel)]="searchTerm" (ionChange)="searchChanges($event)"></ion-searchbar>
+        <ion-item>
+            <ion-label class="font_red">Select  type</ion-label>
+            <ion-select class="font_red" [(ngModel)]="type" (ionChange)="searchChanges($event)">
+                <ion-select-option value="">All</ion-select-option>
+                <ion-select-option value="quote_id">ID</ion-select-option>
+                <ion-select-option value="author">Author</ion-select-option>
+                <ion-select-option value="random">Random</ion-select-option>
+                <ion-select-option value="random_author">Random Author</ion-select-option>     
+            </ion-select>
+        </ion-item>
+    <ion-list>    
+        <ion-item button detail lines="inset" *ngFor="let quote of quotes | async" (click)="openDetails(quote)">
+            <ion-avatar slot="start">
+                <img src="./assets/icon/episode.ico" alt="ion">
+            </ion-avatar>
+            <ion-label>
+                <h3>{{quote?.quote_id}} Quote</h3>
+                <p>{{quote?.series}}</p>
+            </ion-label>             
+        </ion-item>    
+  </ion-list>
+</ion-content>

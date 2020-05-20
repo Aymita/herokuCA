@@ -1,0 +1,20 @@
+<ion-header>
+<ion-toolbar color="primary">
+  <ion-buttons slot="start" style="background-image:url('./assets/icon/episode.ico'); background-size:cover" defaultHref="/tabs/characters">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>{{ character?.name }}</ion-title> 
+</ion-toolbar>
+</ion-header>
+<ion-card class="background">  
+  <ion-card-content class="small-font">
+     <h3 class="small-black">Nickname: {{character?.nickname}}</h3>
+      <img  width="150" height="200" src="{{character?.img}}" alt="ion">
+     <p >Occupation: {{character?.occupation}}</p>
+     <p>Status: {{character?.status}}</p>
+     <p>Birthday: {{character?.birthday}}</p>
+     <p>Series: {{character?.series}}</p>
+     <p>Portrayed: {{character?.portrayed}}</p> 
+     <h3>Category: {{character?.category}}</h3>     
+  </ion-card-content>
+  </ion-card>
