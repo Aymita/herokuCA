@@ -11,7 +11,7 @@ export class ApiService {
 
   getEpisodes(){
       
-      return this.http.get(`https://glacial-lake-21164.herokuapp.com/assets/episodes.json`);
+      return this.http.get(`https://polar-hollows-62808.herokuapp.com//assets/episodes.json`);
   }
 
   getEpisode(id) {   
@@ -42,7 +42,7 @@ export class ApiService {
  }
 
  getCharacters(){
-      return this.http.get(`https://glacial-lake-21164.herokuapp.com/assets/characters.json`);
+      return this.http.get(`https://polar-hollows-62808.herokuapp.com/assets/characters.json`);
   }
 
   getCharacter(id) {   
@@ -90,7 +90,7 @@ export class ApiService {
  }
 
  getQuotes(){
-      return this.http.get(`https://glacial-lake-21164.herokuapp.com/assets/quotes.json`);
+      return this.http.get(`https://polar-hollows-62808.herokuapp.com/assets/quotes.json`);
   }
 
   getQuote(id) {   
@@ -137,7 +137,7 @@ export class ApiService {
  }
  
  getDeaths(){     
-    return this.http.get(`https://glacial-lake-21164.herokuapp.com/assets/deaths.json`);
+    return this.http.get(`https://polar-hollows-62808.herokuapp.com/assets/deaths.json`);
   }
  
   getDeathsByName(name){
